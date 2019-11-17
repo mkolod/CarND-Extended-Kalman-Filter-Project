@@ -34,7 +34,7 @@ class KalmanFilter {
    */
   void Predict();
 
-  /**
+    /**
    * Updates the state by using standard Kalman Filter equations
    * @param z The measurement at k+1
    */
@@ -63,6 +63,10 @@ class KalmanFilter {
 
   // measurement covariance matrix
   Eigen::MatrixXd R_;
+
+private:
+    void UpdateCommon(const Eigen::VectorXd &y);
+
 };
 
 #endif // KALMAN_FILTER_H_
